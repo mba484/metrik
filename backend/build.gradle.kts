@@ -11,6 +11,8 @@ plugins {
     jacoco
 }
 
+ext["log4j2.version"] = "2.17.1"
+
 group = "metrik-backend"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
