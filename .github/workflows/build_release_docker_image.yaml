@@ -93,8 +93,7 @@ jobs:
 
       # - name: Login to AWS ECR
       #   run: aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ secrets.AWS_PUBLIC_ECR_ACCOUNT_URL }}
-
-
+      
       - name: Build and push Docker Image
         uses: mr-smithers-excellent/docker-build-push@v5
         name: Build & push Docker image
