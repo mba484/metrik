@@ -105,7 +105,7 @@ jobs:
           dockerfile: ./ci/Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          working-directory: ./ci
+
 
 
       # - name: Build and push Docker image
