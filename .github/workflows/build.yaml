@@ -1,0 +1,21 @@
+name: Build
+
+on:    
+  workflow_dispatch:
+
+env:
+  IMAGE_NAME: metrik
+
+jobs:
+  buildjob:
+    name: 'Test build job'
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Setup timezone
+          run: sudo timedatectl set-timezone "Asia/Shanghai"
+
+        - uses: actions/checkout@v2
+        - run: |
+            pwd
+            ls
