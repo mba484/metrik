@@ -25,8 +25,9 @@ RUN mkdir -p /app/logs
 # Nginx config
 RUN mkdir -p /etc/nginx/
 RUN pwd
-RUN ls
-COPY config/nginx_release.conf /etc/nginx/nginx.conf
+RUN ls /home/runner/work/metrik/metrik
+COPY /home/runner/work/metrik/metrik/config/nginx_release.conf /etc/nginx/nginx.conf
+#COPY ./ci/config/nginx_release.conf /etc/nginx/nginx.conf
 
 # Suporvisord config
 RUN mkdir -p /etc/supervisor/conf.d/

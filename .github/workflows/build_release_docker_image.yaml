@@ -79,7 +79,8 @@ jobs:
           cp -rp ./frontend/dist $ARTIFACT_DIR/frontend/
           cp -p ./backend/build/libs/metrik-backend-*.jar $ARTIFACT_DIR/backend/
           cp -p ./backend/run.sh $ARTIFACT_DIR/backend/
-
+          pwd
+          ls
       # - name: Install AWS CLI
       #   run: |
       #     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
