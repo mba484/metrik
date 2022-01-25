@@ -80,9 +80,10 @@ jobs:
           cp -p ./backend/build/libs/metrik-backend-*.jar $ARTIFACT_DIR/backend/
           cp -p ./backend/run.sh $ARTIFACT_DIR/backend/
           pwd
-          ls ci
-          ls /ci/artifacts/frontend
-          ls /ci/artifacts/backend
+          ls ./ci
+          ls ./ci/artifacts/frontend
+          ls ./ci/artifacts/backend
+          cd ./ci
       # - name: Install AWS CLI
       #   run: |
       #     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -105,7 +106,7 @@ jobs:
           image: mmsajidcloud/dora-metrik
           tags: v1, latest
           registry: docker.io
-          dockerfile: ./ci/Dockerfile
+          dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           # working-dir: ./ci
