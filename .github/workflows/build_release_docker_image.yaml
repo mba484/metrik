@@ -102,9 +102,6 @@ jobs:
       
       - name: Build and push Docker Image
         uses: mr-smithers-excellent/docker-build-push@v5
-        run: |
-          ls
-          pwd
         with:
           image: mmsajidcloud/dora-metrik
           tags: v1, latest
