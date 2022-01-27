@@ -29,7 +29,7 @@ jobs:
 
         - name: docker build and push
           run: |
-          docker image ls
+            docker build -t maerskao.azurecr.io/dora-metrik:v1 ../ci/Dockerfile
 
 # - name: Azure Container Registry Build
 #   uses: Azure/acr-build@v1
