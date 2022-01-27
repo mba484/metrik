@@ -33,6 +33,7 @@ jobs:
       - name: Build and push
         run: |
           docker build -t maerskao.azurecr.io/dora-metrik-test:v1 ./ci
+          docker push maerskao.azurecr.io/dora-metrik-test:v0.1
 
         # - name: docker build and push
         #   run: |

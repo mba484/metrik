@@ -119,9 +119,12 @@ jobs:
           username: ${{ secrets.MAERSKAO_DOCKER_USERNAME }}
           password: ${{ secrets.MAERSKAO_DOCKER_PASSWORD }}
 
-      - name: docker build and push
+      - name: Build and push
         run: |
-          docker build -t mmsajidcloud/dora-metrik:v1 ../ci/
+          docker build -t maerskao.azurecr.io/dora-metrik:v1 ./ci
+          docker push maerskao.azurecr.io/dora-metrik:v1
+
+      
 
 
 
